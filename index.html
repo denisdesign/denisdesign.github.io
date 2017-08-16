@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Denis Design Portofolio</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  </head>
+
+  <body onscroll="scrollHide()" onload="displayLang()">
+    <section class="intro">
+      <div class="lang">fr</div>
+      <div class="continueButton" >
+      <div class="continue" ></div>
+      <div class="continueInside" onclick="jumpDown()"></div>
+      </div>
+    </section>
+
+    <div class="bust" onmouseover="showSpeech()" onmouseout="hideSpeech()">
+      <div class="speech"></div>
+      <div class="speechtail"></div>
+      <img src="css/content/face.png" class="face">
+      <img src="css/content/heart.png" class="heart">
+      <img src="css/content/gear1.png" class="gear1">
+      <img src="css/content/gear2.png" class="gear2">
+      <div class="lightbulb"></div>
+    </div>
+    <section class="aboutme">
+    <div class="orangebg">
+    <p id="aboutmetext">Lorem ipsum dolor sit amet, nam cu mollis sapientem, <br>eos verear evertitur in, mnesarchum percipitur eu eam. <br>Mazim iriure eu ius, laoreet luptatum iracundia at nec. <br>Prima vitae scaevola in pro. Sea eu porro denique voluptatibus.<br>
+<br>Cu elitr cotidieque neglegentur nec, vim alia animal cu. In quaeque<br> omittam deserunt qui, veri dicta tacimates mel an. Eos cu discere <br>platonem, graece dicunt apeirian te sed. Ad populo blandit mei, <br>assum aliquando temporibus sed ne. Veritus pertinax repudiare <br>quo ad, ad volumus iracundia nec, putant praesent euripidis mea eu.<br>Postea volutpat usu et. Sed dolores copiosae erroribus eu, ea mea nulla<br>libris iudicabit.</p></div>
+<div class="aboutmebox">
+  
+  <p class="cvlink">download my cv right <a href="fakeCV.txt" download>here</a></p>
+</div>
+    </section>
+    <section class="portofolio">
+      <div class="showbox">
+        <div class="slideBack" onclick="changeSite(-1)">
+          <div class="slideButtonBackTop"></div>
+          <div class="slideButtonBackBottom"></div>
+        </div>
+        <div class="sitePreview"><img src="css/content/gear1.png"><p class="siteTitle">Site A</p></div>
+        <div class="sitePreview"><img src="css/content/gear2.png"><p class="siteTitle">Site B</p></div>
+        <div class="sitePreview"><a href="https://anna-ap.github.io/MiniPortofolio/filtreTransform/index.html" target="_blank"><img src="css/content/heart.png"><p class="siteTitle">Site C</p></a></div>
+        <div class="sitePreview"><img src="css/content/lightbulb.png"><p class="siteTitle">Site D</p></div>
+        <div class="slideFoward" onclick="changeSite(1)">
+          <div class="slideButtonFowardTop"></div>
+          <div class="slideButtonFowardBottom"></div>
+        </div>
+      </div>
+      <div class="showboxScroll">
+        <div class="showboxSelector" onclick="currentSite(1)"></div>
+        <div class="showboxSelector" onclick="currentSite(2)"></div>
+        <div class="showboxSelector" onclick="currentSite(3)"></div>
+        <div class="showboxSelector" onclick="currentSite(4)"></div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contactinfo">
+        <p class="contactDialog">got a question ?</p>
+        <p class="contactDialog">need something done ?</p>
+        <p class="contactDialog">i'm listening !</p>
+        <br><br>
+        <div class="imageDetail">
+          <img src="css/content/mail.png">
+          <a href="mailto:denismuresan16@hotmail.com" target="_top" class="contactLinks">contact@dennisdesign.com</a>
+        </div>
+        <div class="imageDetail">
+          <img src="css/content/phone.png">
+          <p class="contactLinks">06 95 23 77 02</p>
+        </div>
+        <p class="contactDialog">see you soon !</p>
+        <hr><hr><hr>
+        <br>
+        <div class="backToTopContainer">
+        <div class="backToTop">
+          <a onclick="jumptoTop()"><div></div>
+          <p>let's go back up</p></a>
+        </div>
+      </div>
+      </div>
+      <img src="css/content/contactbg.svg" class="contactbg1">
+      <img src="css/content/contactbg.svg" class="contactbg2">
+    </section>
+    <div class="footer">© Dennis Design 2017</div>
+  </body>
+
+  <script src="script.js"></script>
+
+</html>

@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background-color: #f2f0d5; }
+
+#headerImg {
+  background-image: url("headerImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  font-family: "Muli", sans-serif;
+  color: #f2f0d5;
+  text-align: center;
+  font-size: 36px;
+  line-height: 100vh;
+  text-transform: uppercase;
+  letter-spacing: 10px; }
+
+h1 {
+  font-family: "Muli", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #a3865a;
+  text-align: center;
+  margin: 10px;
+  letter-spacing: 10px;
+  font-weight: lighter; }
+
+.menu_container {
+  background-color: #cfb080; }
+  .menu_container h2, .menu_container .reflexologie h3, .reflexologie .menu_container h3, .menu_container .reflexologie .altHeader, .reflexologie .menu_container .altHeader {
+    text-align: center;
+    font-family: "Muli", sans-serif;
+    color: #f2f0d5;
+    font-size: 24px;
+    font-weight: lighter;
+    padding: 20px; }
+  .menu_container nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px; }
+    .menu_container nav button {
+      font-size: 14px;
+      border: 3px solid #f2f0d5;
+      font-family: "Open Sans", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      color: #a3865a;
+      background-color: #f2f0d5;
+      width: 330px; }
+    .menu_container nav button:hover {
+      background-color: #cfb080;
+      color: #f2f0d5;
+      cursor: pointer; }
+
+.reflexologie {
+  background-color: #788083; }
+  .reflexologie h2, .reflexologie h3, .reflexologie .altHeader {
+    color: #f2f0d5;
+    font-family: "Muli", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    padding-top: 30px; }
+  .reflexologie h3 {
+    font-size: 18px;
+    padding: 0;
+    text-transform: none; }
+  .reflexologie p {
+    color: #f2f0d5;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    width: 760px;
+    font-weight: lighter;
+    margin: 36px auto 0;
+    padding-bottom: 36px; }
+  .reflexologie .principe_container, .reflexologie .pourqui_container {
+    background-color: #f2f0d5; }
+    .reflexologie .principe_container img, .reflexologie .pourqui_container img {
+      float: left; }
+    .reflexologie .principe_container p, .reflexologie .pourqui_container p {
+      color: #475256; }
+  .reflexologie .altHeader {
+    font-size: 22px;
+    color: #475256; }
+  .reflexologie .egypt_break, .reflexologie .pourqui_break {
+    width: 100%;
+    height: 300px;
+    background-image: url("egypt.jpg");
+    background-size: cover;
+    background-position: center; }
+  .reflexologie .pourqui_break {
+    background-image: url("pourqui.jpg"); }
+  .reflexologie .histoire_container {
+    background-color: #cfb080; }
+  .reflexologie .altHeader:nth-child(1) {
+    color: #f2f0d5; }
+  .reflexologie #pourqui {
+    color: #475256; }
+  .reflexologie .pourqui_text {
+    width: 1080px; }
+
+.warning_icon {
+  float: left;
+  background-image: url("warning_icon.png");
+  height: 24px;
+  width: 28px; }
+
+.profile_pic {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  background-image: url("nathaliemoreau.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin: auto; }
+
+.votre_reflexologue p {
+  color: #475256;
+  font-family: "Open Sans", sans-serif; }
+.votre_reflexologue p:first-line {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
