@@ -1,0 +1,43 @@
+.content{
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.eventBox{
+background-color: #93CFD5;
+width: 20%;
+margin: 20px;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+}
+.eventBox:hover{
+  cursor: pointer;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, .5);
+}
+#eventName,#eventDate,#more,#author,#dateOfCreation{
+  color: white;
+text-align: center;
+font-family: "Titillium Web";
+font-size: 1.1em;
+}
+.hidebox{
+overflow: hidden;
+height: 0px;
+opacity: 0;
+-webkit-transition: all .3s ease-in-out ;
+-moz-transition: all .3s ease-in-out ;
+-ms-transition: all .3s ease-in-out ;
+}
+#author,#dateOfCreation{
+text-align: center;
+}
+h1{
+  font-family: "Titillium Web" ;
+  margin-left: 60px;
+  color: #93CFD5;
+}

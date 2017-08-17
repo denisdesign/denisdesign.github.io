@@ -1,0 +1,154 @@
+body{
+  margin: 0;
+  background-color: #202044;
+  background-image: url("../screens/site2bg.png");
+  width: 280vw;
+  height: 95vh;
+}
+hr{
+  margin: 0;
+  padding: 0;
+  border: 0 solid black;
+  visibility: hidden;
+}
+#title{
+  padding: -40px;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 6.8vh;
+  color: white;
+  text-align: center;
+  position: fixed;
+  left : 3vh;
+  top : 3vh;
+  z-index: 100
+}
+#title span{
+  color: #87D3EE;
+  font-size: 5vh;
+}
+#title span:hover{
+  color: gold;
+  cursor: default;
+}
+#ofl{
+  text-decoration: none;
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  position: fixed;
+  right: 9vh;
+  top: 3vh;
+}
+#ofl:hover{
+  color: #87D3EE;
+}
+
+.container {
+  float: left;
+  width: 60vw;
+  height: 80vh;
+  margin: 0vh 10vw 0vh 20vw;
+  padding-top: 10vh;
+}
+.container img{
+  width: 59.7vw;
+  border: 2px solid  #87D3EE;
+}
+.container img:hover{
+  border: 2px dashed gold;
+}
+
+.container p{
+  font-family: 'Slabo 27px', serif;
+  color: white;
+  text-align: center;
+}
+#back{
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  color: white;
+  font-size: 7vh;
+  font-family: 'Slabo 27px', serif;
+  position: fixed;
+  bottom: 3vh;
+  left: 4vh;
+}
+#back:hover{
+  color: #87D3EE;
+  transform: translateX(-1vh);
+}
+
+#image1{
+  animation-name: image1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes image1 {
+  from{transform: translateY(0);}
+  to{transform: translateY(-3vh);}
+}
+
+#image2{
+  animation-name: image2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes image2 {
+  0%{transform: translateX(-3vh);}
+  50%{transform: translateX(6vh);}
+  75%{transform: translateX(-3vh);}
+}
+
+#image3{
+  animation-name: image3;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes image3 {
+  0%{transform: rotate(-1deg);}
+  100%{transform: rotate(+2deg);}
+}
+.buttons{
+  width : 60vw;
+  position: fixed;
+  bottom: 3vh;
+  margin: 0 20vw 0 20vw;
+}
+.buttons img{
+  width: 5vw;
+  padding: 0 12.5vw 0 12.5vw ;
+}
+
+#left{
+  animation-name: left;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 5;
+  animation-delay: .5s;
+  animation-direction: alternate;
+}
+
+#right{
+  animation-name: right;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 5;
+  animation-delay: 1s;
+  animation-direction: alternate;
+}
+
+@keyframes left {
+  0%{transform: translateY(.2vh)}
+  50%{transform: translateY(-0.4vh)}
+  100%{transform: translateY(0vh)}
+}
+@keyframes right {
+  0%{transform: translateY(.2vh)}
+  50%{transform: translateY(-0.4vh)}
+  100%{transform: translateY(0vh)}
+}

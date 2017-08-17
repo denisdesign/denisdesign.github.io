@@ -1,0 +1,234 @@
+a:focus{
+    outline: none;
+}
+a{
+  text-decoration: none;
+}
+.tuto{
+  position: absolute;
+  transform : rotate(-30deg);
+  text-align: center;
+  font-family: 'Amatica SC', cursive;
+  color: orange;
+  font-size: 5vh;
+  margin: 50vh 5vw;
+  cursor: default;
+}
+.navbar{
+  width: 45vw;
+  position: absolute;
+  transform: rotate(-5.2deg);
+  margin: 15.5vh 50vw;
+}
+.navbar a{
+  border-top: 4px dashed rgba(0, 0, 0, 0);
+  border-right: 4px dashed rgba(0, 0, 0, 0);
+  border-left: 4px dashed rgba(0, 0, 0, 0);
+  background-color: orange;
+  margin: 0 15px;
+  padding: 0 15px;
+  color: #3F3F3F;
+  font-family: 'Amatica SC',cursive;
+  font-size: 140%;
+  transition: all .2s ease-in-out;
+}
+.navbar a:hover{
+  color: orange;
+  border-top: 4px dashed orange;
+  border-right: 4px dashed orange;
+  border-left: 4px dashed orange;
+  background-color: rgba(0, 0, 0, 0);
+}
+#outlink{
+  color: orange;
+}
+#outlink:hover{
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px orange;
+  font-weight: bold;
+  text-decoration: underline;
+}
+body{
+  max-height: 200vh;
+  background-image: linear-gradient(#232323,#3F3F3F);
+  background-repeat: no-repeat;
+  scroll-behavior : smooth;
+}
+#soundbox img{
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  width : 5vw;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: orange;
+  border: 0px solid orange;
+  transform: scale(.7);
+  transition: all .2s ease-in-out;
+}
+#soundbox img:hover{
+  background-color: rgba(0, 0, 0, 0);
+  border: 10px double orange;
+  transform: scale(1);
+  cursor: pointer;
+}
+.hotbar{
+  z-index: 2;
+  position: fixed;
+  right: 3vw;
+  bottom: 16vh;
+}
+.hotbar li{
+  transition: all .2s ease-in-out;
+  width: 3vw;
+  height: 3vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 3vw;
+  font-weight: bolder;
+  margin: 3vh;
+  color: #3F3F3F;
+  background-color: orange;
+  border-radius: 0%;
+  list-style: none;
+  border: 3px solid orange;
+  text-decoration: none;
+}
+.hotbar li:hover{
+  transform: scale(0.8);
+  -webkit-border-radius : 100%;
+  -moz-border-radius : 100%;
+  cursor: pointer;
+  box-shadow: 1vh 0vh 1vh rgba(0, 0, 0, 0.6) ;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px dashed orange;
+  color: orange;
+}
+#animid{
+  transition: all .2s ease-in-out;
+}
+#animid:hover{
+  transform: translateX(-1vw);
+}
+#foreg svg{
+  top : -4vh;
+  z-index: -2;
+  overflow: hidden;
+  position: fixed;
+  margin: -10px;
+  pointer-events: none;
+  stroke: orange;
+  stroke-dasharray :20,10,5,10;
+  stroke-width : 10;
+}
+#title{
+  margin-left: 6%;
+  color: orange;
+  margin-top: 3%;
+  font-family: 'Indie Flower', cursive;
+  font-size: 50px;
+  transform: rotate(-5deg);
+  cursor: default;
+}
+#subtitle{
+  margin-left: 9%;
+  color: orange;
+  font-family: 'Amatica SC', cursive;
+  font-size: 30px;
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+.button_container_left p{
+  font-family: 'Poiret One', cursive;
+  font-size: 30px;
+  float: right;
+  margin: 10vh 0 0 5vw;
+  clear: both;
+  color: orange;
+  cursor: default;
+}
+#btsel:hover + p {
+  font-weight: bold;
+  text-shadow: .5vh .8vh 2px rgba(0, 0, 0, 0.5);
+  cursor: none;
+}
+.button_container_right p{
+  font-family: 'Poiret One', cursive;
+  font-size: 30px;
+  margin: 10vh 5vw 0 0vw;
+  float: left;
+  color: orange;
+  cursor: default;
+}
+.button_container_left{
+margin-top: 5vh;
+float: left;
+padding-left: 25vw;
+}
+
+.button_container_left img{
+  width : 17vw;
+  border: 8px dashed orange;
+  -webkit-border-radius: 100%;
+  -moz-border-radius : 100%;
+  transition: all .2s ease-in-out ;
+  opacity: 0.7;
+}
+.button_container_left img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  opacity: 1;
+  border: 8px solid orange;
+  box-shadow: -2vh 2vh 1vh rgba(0, 0, 0, 0.6) ;
+}
+.button_container_right{
+margin-top: 5vh;
+clear: both;
+float: right;
+padding-right: 28vw;
+}
+
+.button_container_right img{
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border: 8px dashed orange;
+  width : 17vw;
+  opacity: 0.7;
+  transition: all .2s ease-in-out ;
+}
+.button_container_right img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  opacity: 1;
+  border: 8px solid  orange;
+  box-shadow: 2vh 2vh 1vh rgba(0, 0, 0, 0.6) ;
+}
+#leftLine{
+  z-index: -1;
+  stroke: orange;
+  stroke-dasharray :20,10,10,10;
+  stroke-width : 7;
+}
+#about{
+  background-color: orange;
+  color: #3F3F3F;
+  border-bottom: 4px dashed rgba(0, 0, 0, 0);
+  border-right: 4px dashed rgba(0, 0, 0, 0);
+  border-left: 4px dashed rgba(0, 0, 0, 0);
+  font-size: 170%;
+  font-family: 'Amatica SC',cursive;
+  position: absolute;
+  margin: 122.5vh 0 0 25vw;
+  transform: rotate(5.17deg);
+  transition: all .2s ease-in-out;
+}
+#about:hover{
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 4px dashed orange;
+  border-right: 4px dashed orange;
+  border-left: 4px dashed orange;
+  font-size: 190%;
+  color: orange;
+  cursor: default;
+}

@@ -1,0 +1,78 @@
+$backcolor : #FFCE5F ;
+$contentcolor : #FFA121 ;
+$fontcolor : #443624 ;
+$fontstyle :  'PT Sans' ;
+$hotcolor : #FF3737 ;
+$coldcolor : #303030 ;
+
+body {
+  background-color: $backcolor ;
+  color: $fontcolor ;
+  font-family: $fontstyle ;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h4 {
+  padding-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  text-decoration: underline;
+  padding-left: 20px;
+}
+
+p{
+  font-size: 15px;
+  padding-left: 20px;
+  width: 50vw;
+}
+a{
+  color: $hotcolor ;
+}
+hr {
+  background-color: $fontcolor ;
+  height: 2px;
+  border: none;
+}
+h3{
+  @extend h2;
+}
+
+.container {
+  border-radius: 30px;
+  background-color: $contentcolor ;
+  width: 75vw;
+  margin: 50px 0 50px 5vw;
+  border : 4px solid $fontcolor ;
+}
+
+.right {
+  margin-left: 20vw;
+}
+
+#heat {
+  background-color: $coldcolor;
+  border-radius: 30px;
+}
+
+img {
+  float: right;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  p {
+    width: 100vw;
+  }
+}

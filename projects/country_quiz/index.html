@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Uber Country Quiz</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <audio id="correct"><source src="right.mp3" type="audio/mp3"></audio>
+    <audio id="wrong"><source src="wrong.mp3" type="audio/mp3"></audio>
+    <audio id="finished"><source src="gameover.mp3" type="audio/mp3"></audio>
+
+    <div id="centerColumn"></div>
+    <div id="flag"></div>
+    <div class="question" id="first">Country:</div>
+    <div class="question" id="second">Capital:</div>
+    <input id="question1" type="text" onkeydown="addAnswer(event)"></input>
+    <input id="question2" type="text" onkeydown="addAnswer(event)"></input>
+    <button id="goButton" onclick="addAnswer('gogo')">&#8594;Go&#8592;</button>
+    <div id="watch"></div>
+    <div id="clock">: 25s</div>
+    <div id="spree">Streak : 0</div>
+    <div id="hint"></div>
+    <div id="help" onclick="callHelp()">Help!</div>
+    <div id="scorebar">Score : 0</div>
+    <div id="triesbar">Tries : 5</div>
+    <div id="pointWin">+1</div>
+    <div id="pointLose">-1</div>
+    <div id="timeWin">+</div>
+    <div id="timeLose">-1s</div>
+    <div id="gameOver">Game Over<br>Total Score : </div>
+    <div id="topHide"><div id="buttonHide" onclick="startGame()">START</div><div id="titleGFX"></div></div>
+    <div id="bottomHide"><div id="hintHelp">Clique sur "Help" pour les indices...</div></div>
+
+  </body>
+</html>

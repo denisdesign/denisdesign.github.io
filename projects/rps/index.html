@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+      var userChoice ;
+      var aiChoose ;
+      var userScoreTotal = 0;
+      var aiScoreTotal = 0;
+      var stopTitleAnim = function(){
+        setTimeout(rockStop,500);
+        setTimeout(paperStop,1500);
+        setTimeout(scissorsStop,2500);
+      }
+      rockStop = function(){
+        document.getElementById('rockT').style.animationPlayState = "paused";
+        document.getElementById('rockT').style.top = "5vh";
+      }
+      var checkScore = function(){
+        //  stopTitleAnim();
+          if (userScoreTotal > 4){
+            userWinner();
+          }
+          else if (aiScoreTotal > 4) {
+            aiWinner();
+          }
+          else{console.log("something");
+            }
+      }
+      playSoundWooho = function(){
+        var soundToPlay = document.getElementById("clap");
+        soundToPlay.play();
+      }
+      playSoundBoo = function(){
+        var soundToPlay = document.getElementById("boo");
+        soundToPlay.play();
+      }
+      playSoundTie = function(){
+        var soundToPlay = document.getElementById("tieS");
+        soundToPlay.play();
+      }
+      playSoundFail = function(){
+        var soundToPlay = document.getElementById("fail");
+        soundToPlay.play();
+      }
+      playSoundCena = function(){
+        var soundToPlay = document.getElementById("cena");
+        soundToPlay.play();
+      }
+      var stopWinAnim = function(){
+        document.getElementById("playerWins").style.animationPlayState = "paused";
+        document.getElementById("computerWins").style.animationPlayState = "paused";
+        document.getElementById("aiBar").style.animationPlayState = "paused";
+        document.getElementById("userBar").style.animationPlayState = "paused";
+        restartPage();
+
+      }
+      var hideMajor = function(){
+        document.getElementById("userBox").style.visibility = "hidden";
+        document.getElementById("aiBox").style.visibility = "hidden";
+        document.getElementById("choice1").style.visibility = "hidden";
+        document.getElementById("choice2").style.visibility = "hidden";
+        document.getElementById("choice3").style.visibility = "hidden";
+        document.getElementById("goButton").style.visibility = "hidden";
+        document.getElementById("lose").style.visibility = "hidden";
+        document.getElementById("win").style.visibility = "hidden";
+        document.getElementById("scissorsT").style.visibility = "hidden";
+        document.getElementById("paperT").style.visibility = "hidden";
+        document.getElementById("rockT").style.visibility = "hidden";
+        setTimeout(stopWinAnim,4000);
+      }
+      var userWinner = function(){
+        hideMajor();
+        document.getElementById("userTitle").style.visibility = "hidden";
+        document.getElementById("userBar").style.animationName = "userBarAnim";
+        document.getElementById("playerWins").style.animationName = "playerWinAnim";
+        playSoundCena();
+      }
+      var aiWinner = function(){
+        document.getElementById("aiTitle").style.visibility = "hidden";
+        hideMajor();
+        document.getElementById("aiBar").style.animationName = "aiBarAnim";
+        document.getElementById("computerWins").style.animationName = "computerWinAnim";
+        playSoundFail();
+      }
+      var chooseRock = function(){
+        userChoice = "rock";
+        tutoHide();
+        document.getElementById('userBox').style.backgroundImage = "url('rock.png')";
+      }
+      var choosePaper = function(){
+        userChoice = "paper";
+        tutoHide();
+        document.getElementById('userBox').style.backgroundImage = "url('paper.png')";
+      }
+      var chooseScissors = function(){
+        userChoice = "scissors";
+        tutoHide();
+        document.getElementById('userBox').style.backgroundImage = "url('scissors.png')";
+      }
+      var tutoHide = function(){
+        document.getElementById("goButton").style.visibility = "visible";
+        document.getElementById("arrow").style.visibility = "hidden";
+      }
+      var startReset = function(){
+        setTimeout(resetButton, 700);
+        setTimeout(resetWinLose,2999);
+      }
+      var resetButton = function(){
+        document.getElementById('goButton').style.animationName = "";
+      }
+      var resetWinLose = function(){
+        document.getElementById('win').style.animationPlayState = "paused";
+        document.getElementById('lose').style.animationPlayState = "paused";
+        document.getElementById("goButton").style.pointerEvents = "all";
+        document.getElementById("goButton").style.visibility = "hidden";
+        document.getElementById('goButton').style.animationName = "";
+        document.getElementById('tie').style.animationName = "";
+        document.getElementById('userBox').style.animationName = "";
+        document.getElementById('aiBox').style.animationName = "";
+        document.getElementById('userBox').style.backgroundImage = "";
+        document.getElementById('aiBox').style.backgroundImage = "";
+        userChoice = "";
+        checkScore();
+      }
+
+      var aiChoosing = function(){
+      aiChoose = Math.random();
+    //    aiChoose = .20 ;
+        if (aiChoose < .34) {aiChoose = "rock";
+      document.getElementById('aiBox').style.backgroundImage = "url('rock.png')";}
+        else if (aiChoose < .67) {aiChoose = "paper";
+      document.getElementById('aiBox').style.backgroundImage = "url('paper.png')";}
+        else {aiChoose = "scissors";
+      document.getElementById('aiBox').style.backgroundImage = "url('scissors.png')";}
+      }
+      var winAction = function(){
+        document.getElementById("goButton").style.animationName = "spin";
+        document.getElementById("goButton").style.pointerEvents = "none";
+        document.getElementById("win").style.animationPlayState = "running";
+        document.getElementById("userBox").style.animationName = "winBox" ;
+        document.getElementById("aiBox").style.animationName = "failBox" ;
+        userScoreTotal += 1 ;
+        document.getElementById("userScore").innerHTML = userScoreTotal ;
+        startReset();
+        playSoundWooho();
+      }
+      var loseAction = function(){
+        document.getElementById("goButton").style.animationName = "spin";
+        document.getElementById("goButton").style.pointerEvents = "none";
+        document.getElementById("lose").style.animationPlayState = "running";
+        document.getElementById("aiBox").style.animationName = "winBox" ;
+        document.getElementById("userBox").style.animationName = "failBox" ;
+        aiScoreTotal += 1 ;
+        startReset();
+        document.getElementById("aiScore").innerHTML = aiScoreTotal ;
+        playSoundBoo();
+      }
+      var tieAction = function(){
+        document.getElementById("userBox").style.animationName = "userTie" ;
+        document.getElementById("aiBox").style.animationName = "aiTie" ;
+        document.getElementById("goButton").style.animationName = "goButtonHide" ;
+        document.getElementById("tie").style.animationName = "tieAnim" ;
+        document.getElementById("goButton").style.visibility = "hidden" ;
+        startReset();
+        playSoundTie();
+      }
+      var compareChoice = function(){
+        aiChoosing();
+        document.getElementById('goButton').style.animationPlayState = "running";
+        if(userChoice == aiChoose){tieAction();}
+        else if (userChoice == "rock" && aiChoose == "paper") {loseAction();}
+        else if (userChoice == "paper" && aiChoose == "scissors") {loseAction();}
+        else if (userChoice == "scissors" && aiChoose == "rock") {loseAction();}
+        else if (userChoice == "rock" && aiChoose == "scissors") {winAction();}
+        else if (userChoice == "paper" && aiChoose == "rock") {winAction();}
+        else {winAction();}
+
+      }
+      var restartPage = function(){
+        console.log("stuff");
+        window.location.reload();
+      }
+    </script>
+  </head>
+  <body>
+    <audio id="clap">
+        <source src="clap.mp3" type="audio/mp3">
+    </audio>
+    <audio id="boo">
+        <source src="boo.mp3" type="audio/mp3">
+    </audio>
+    <audio id="tieS">
+        <source src="tie.mp3" type="audio/mp3">
+    </audio>
+    <audio id="fail">
+        <source src="fail.mp3" type="audio/mp3">
+    </audio>
+    <audio id="cena">
+        <source src="cena.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="titleTop"><div id="rockT">Rock! </div><div id="paperT">Paper! </div><div id="scissorsT">Scissors! </div></div>
+    <div id="userBar"><div id="userScore">0</div><div id="userTitle">Player</div></div>
+    <div id="aiBar"><div id="aiScore">0</div><div id="aiTitle">Computer</div></div>
+    <div class="arena">
+      <div id="userBox" onclick="checkChoice()"></div>
+      <div id="goButton" onclick="compareChoice()">GO</div>
+      <div id="aiBox" ></div>
+    </div>
+    <div id="playerWins"><div id="wellDone">Player Wins ! </div></div>
+    <div id="computerWins"><div id="wellDone">Computer Wins ! </div></div>
+    <div id="win">You Win ! </div>
+    <div id="lose">You Lose ! </div>
+    <div id="tie">Tie ! </div>
+    <div id="arrow"></div>
+    <div class="choiceSlot">
+      <div id="choice1" onclick="chooseRock()"><p>Rock!</p></div>
+      <div id="choice2" onclick="choosePaper()"><p>Paper!</p></div>
+      <div id="choice3" onclick="chooseScissors()"><p>Scissors!</p></div>
+    </div>
+
+  </body>
+</html>

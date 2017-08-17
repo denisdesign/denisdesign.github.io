@@ -1,0 +1,99 @@
+body{
+  background-image: linear-gradient(#202240,#6832DB);
+  font-family: 'Titillium Web', sans-serif;
+  height: 240vh;
+  margin: 0;
+  width: 98vw;
+}
+#backbutton a{
+  color: white;
+  font-size: 5vh;
+  position: absolute;
+  margin: 5vh 5vw;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 100%;
+  width: 3.8vw;
+  text-align: center;
+}
+#linkof{
+  text-decoration: none;
+  text-align: center;
+  color: #C6E6FF;
+  transition: all .1s ease-in-out;
+  float: left;
+  width: 20vw;
+  margin: 0 40vw 15vh 40vw;
+}
+#linkof:hover{
+  color: white;
+  transform: translateY(-1vh);
+}
+h1{
+  color: #C6E6FF;
+  text-align: center;
+  font-size: 4vw;
+}
+#bg{
+  margin: -5vh;
+  position: fixed;
+  opacity: 0.5;
+  min-height:100vh;
+  min-width: 102vw;
+  z-index: -100;
+}
+.container{
+  padding: 10vh 0;
+  clear: both;
+}
+.container img{
+  width : 41.5vw;
+  float: right;
+  margin: 0 9vw 0 .5vw;
+  transition: all .3s ease-in-out;
+}
+.container img:hover{
+  transform: scale(1.2);
+}
+.container p {
+  transition: all .3s ease-in-out;
+  height: 20vh;
+  margin: 0 .5vw 0 5vw;
+  float: left;
+  text-align: justify;
+  color: white;
+  width: 37.5vw;
+}
+
+.navbar{
+right: 2vw;
+height: 40vh;
+top: 30vh;
+bottom: 20vh;
+position: fixed;
+}
+.navbar a{
+  margin: 7vh 0 7vh 0;
+  display: block;
+  z-index: 100;
+  border: 2px solid rgba(255, 255, 255, 0);;
+  color: white;
+  text-decoration: none;
+  border-radius: 100%;
+  width: 1.7vw;
+  text-align: center;
+  transition: all .1s ease-in-out;
+}
+.navbar a:hover{
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#foreg img{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width:100vw;
+  z-index: 200;
+  pointer-events: none;
+}

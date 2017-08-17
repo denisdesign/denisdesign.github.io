@@ -1,0 +1,180 @@
+body{
+  margin: 0;
+  background-color: white;
+  height: 300vh;
+}
+#bg img{
+  position: fixed;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -10vh;
+
+}
+#logo img{
+  width: 5vw;
+  position: fixed;
+  top: 0;
+  right: 1vw;
+  z-index: 1000;
+  animation-name: logo;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes logo {
+  0%{right:42.5vw;}
+  100%{right:1vw;}
+}
+
+.back {
+  position: fixed;
+  height: 10vh;
+  left: 1vw;
+  width: 5vw;
+  top: 0;
+  z-index: 3000;
+}
+
+#hoverlink{
+  position: absolute;
+  z-index: 2000;
+  overflow: hidden;
+  width: 5.25vw;
+  left: 1vw;
+  margin-top: 0;
+  height: 0;
+  transition: all .3s ease-in-out;
+  background-color: orange;
+}
+
+.back a{
+  position: absolute;
+  border: .25vw solid rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-decoration: none;
+  left: 1vw;
+  font-size: 3vw;
+  line-height: 6vh;
+  color: white;
+  z-index: 9999999999999999999999999;
+  top: 0;
+  width: 5vw;
+  animation-name: back;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes back{
+  0%{left:42.5vw;}
+  100%{left:1vw;}
+}
+
+#linkee a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6vw;
+  line-height: 6vh;
+  color: white;
+  z-index: 1000;
+  bottom: 0;
+  width: 7vw;
+  position: fixed;
+  font-family: 'Ubuntu',sans-serif;
+  font-weight: lighter;
+  margin: 0 46.5vw ;
+  transition: all .2s ease-in-out;
+}
+#linkee a:hover{
+  margin-bottom: 1vh;
+}
+
+.back:hover #hoverlink{
+    color: orange;
+    height: 6.5vh;
+}
+.bbar{
+  background-color: black;
+  width: 100vw;
+  height: 7vh;
+  z-index: 10;
+  position: fixed;
+}
+#foretexture img{
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  opacity: .3;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 120
+}
+.logo{
+  position: fixed;
+  top: 1vh;
+  width: 8vw;
+  margin-left: 46vw;
+  display: block;
+  text-align: center;
+  font-family: 'Prompt',sans-serif;
+  font-weight: bolder;
+  border: 2px solid white;
+  z-index: 110;
+}
+#logo1{
+  font-size: 2vh;
+  color: white;
+}
+#logo2{
+  color: white;
+  font-size: .5vw;
+}
+#logo3{
+  font-size: 2vh;
+  color: black;
+  background-color: white;
+}
+div.container#con1{
+  background-image: url("../screens/site31.png");
+}
+div.container#con2{
+  background-image: url("../screens/site32.png");
+}
+div.container#con3{
+  background-image: url("../screens/site33.png");
+}
+div.container{
+  width : 80vw;
+  height : 77vh;
+  margin: 10vh 10vw;
+  background-size: cover;
+  border: .5vw solid rgba(255, 255, 255, 0.7);
+
+}
+div#content{
+  position: absolute;
+  overflow: hidden;
+  width: 80vw;
+  margin-top: 77vh;
+  height: 0vh;
+  transition: all .3s ease-in-out;
+  background-color: orange;
+}
+div.container:hover div#content{
+    color: orange;
+    height: 77vh;
+    margin-top: 0vh;
+}
+#info{
+  color: rgba(0, 0, 0, 0);
+  font-family: 'Ubuntu';
+  font-size: 1.7vw;
+  width : 60vw;
+  padding: 10vh 10vw;
+  padding-top: 0vh;
+  text-align: center;
+  cursor: default;
+  transition: all .3s ease-in-out;
+}
+.container:hover #info{
+  color: white;
+  padding-top: 10vh;
+}

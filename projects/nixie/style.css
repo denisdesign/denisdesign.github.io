@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  overflow: hidden;
+}
+#hour , #minute , #second , #month{
+  display: inline-block;
+  transform: scaleX(.7);
+  font-size: 66px;
+  font-family: 'Nixie One', cursive;
+  letter-spacing: 100px;
+  color : orange;
+}
+#backgroundVideo {
+  position: fixed;
+  object-fit: contain;
+  pointer-events: none;
+  height: 100vh;
+  min-width: 100vw;
+  left: 0;
+  right: 0;
+  opacity: .1;
+  -webkit-filter: grayscale(1);
+}
+
+
+
+
+.clock {
+  position: absolute;
+  bottom: 2vh;
+}

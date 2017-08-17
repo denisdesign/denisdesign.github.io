@@ -1,0 +1,159 @@
+body{
+  margin : 0 ;
+  text-align: center;
+  color: white;
+  font-family: Verdana , sans-serif;
+  background-color: orange;
+}
+
+@font-face {
+    font-family: "Eliantee";
+    src: url('Elianto-Regular.ttf');
+}
+
+h1{
+  margin : 50px auto 0 ;
+  font-size: 3rem ;
+  font-family: "Eliantee";
+  transition: .3s all ease-in-out ;
+  max-width: 400px;
+  letter-spacing: 10px;
+  animation-duration: 1.2s ;
+}
+h1:hover {
+  text-shadow: 3px 3px 3px white;
+  color : #333;
+  cursor: default;
+  letter-spacing: 15px;
+}
+
+h2{
+  transition: .3s all ease-in-out;
+  font-size: 2rem;
+  font-family: "Lobster Two" , sans-serif;
+  margin: 0 auto 40px; ;
+  animation-duration: 1.6s ;
+}
+h1:hover + h2{
+  color : orange;
+  text-shadow: 3px 0px 3px white , 0px 3px 3px white , -3px 0px 3px white , 0px -3px 3px white , 3px 3px 3px lightyellow , -3px 3px 3px lightyellow , 3px -3px 3px lightyellow , -3px -3px 3px lightyellow ;
+}
+h3{
+  animation-duration: 2s ;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Bungee" , sans-serif;
+  color: #333;
+  margin: 20px 0 0 ;
+  text-decoration: overline;
+  line-height: 1.2rem;
+  padding: 0;
+
+}
+h4{
+  animation-duration: 2.4s ;
+  font-size: 1rem;
+  max-width: 35vw;
+  margin: 0 auto 30px;
+  padding: 0;
+}
+p{
+  font-weight: lighter;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align:  left;
+  font-size: .9rem;
+  text-indent: 1rem;
+  transition: .1s all ease-in-out ;
+}
+
+p:hover {
+  background-color: #333;
+  color : white;
+  border-radius: 3px;
+}
+
+p:first-child{
+  text-indent: 0;
+}
+p:first-child:first-letter {
+  font-size : 2.7rem;
+  letter-spacing: 10px;
+  float: left;
+  font-family: serif;
+}
+p:first-child:first-line{
+  font-weight: bold;
+}
+div{
+ max-width: 800px;
+ margin: 0 auto;
+}
+div > p {
+  font-size: .9rem;
+  max-width: 226px;
+  float: left;
+  margin-right: 25px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+div > p:first-child:first-line{
+  font-weight: normal;
+}
+div > p:first-line{
+  font-variant: small-caps;
+}
+p:first-child:first-letter {
+  font-size :.9rem;
+  letter-spacing: normal;
+  font-family: Verdana,sans-serif;;
+}
+
+
+p:last-child{
+  margin-right: 0;
+}
+
+.i {
+  height: auto;
+  width: 23% ;
+  margin: 5% ;
+  display: block;
+  float: left;
+  transition: .3s all ease-in-out ;
+}
+
+.i:hover{
+  transform: scale(1.1);
+  box-shadow: 6px 10px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1200px){
+  .i{
+    width: 40% ;
+    margin: 5% ;
+  }
+}
+
+
+@media (max-width: 800px) {
+  p{
+    text-align: justify;
+  }
+  div > p {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .i{
+    width: 80% ;
+    margin:  10% ;
+  }
+}
+
+@media (max-width: 600px){
+  div > p {
+    max-width: 250px;
+    margin: 0 auto ;
+  }
+}
